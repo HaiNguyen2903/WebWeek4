@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Development</title>
+    <style>
+        body {
+            margin: 0;
+            padding-top: 50px;
+        }
+
+        .topnavbar {
+            background-color: #333;
+            height: 50px;
+            top: 0;
+            width: 100%;
+            position: fixed;
+            left: 0;
+        }
+
+        .topnavbar a {
+            float: right;
+            display: block;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        .sidebar {
+            top: 0;
+            width: 300px;
+            height: calc(100vh - 50px);
+            left: 300px;
+            display: none;
+        }
+
+        .sidebar ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            width: 300px;
+            background-color: #f1f1f1;
+            height: 100%;
+            position: absolute;
+            overflow: auto;
+        }
+
+        .sidebar li a {
+            display: block;
+            color: #000;
+            padding: 8px 16px;
+            text-decoration: none;
+        }
+
+        .sidebar li a:active {
+            display: block;
+            padding: 8px 16px;
+            color: white;
+            text-decoration: none;
+            background-color: #4CAF50;
+        }
+
+        .content {
+            margin-left: 50px;
+        }
+
+        .clickme {
+            background-color:#4CAF50;
+            width: 300px;
+            height: calc(100vh - 50px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .clickme:hover + .sidebar, .sidebar:hover {
+            display: block;
+        }
+
+        .flex-content {
+            display: flex;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="topnavbar">
+        <a href="../html/html_content.html">HTML</a>
+        <a href="../css/css_content.html">CSS</a>
+        <a href="../js/js_content.html">Javascript</a>
+    </div>
+
+
+    <div class="flex-content">
+        <div class="clickme">
+            Click me
+        </div>
+        <div class="sidebar">
+            <ul>
+                <li>
+                    <a href="headings.html">Heading</a>
+                    <a href="paragraphs.html">Paragraphs</a>
+                    <a href="links.html">Links</a>
+                    <a href="images.html">Images</a>
+                    <a href="lists.html">Lists</a>
+                    <a href="tables.html">Tables</a>
+                    <a href="forms.html">Forms</a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="content">
+            <h2>HTML >> Heading</h2>
+            <p>This is a paragraph about HTML Heading</p>
+        </div>
+    </div>
+
+</body>
+
+</html>
